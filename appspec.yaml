@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - MyStack:
+      Type: AWS::CloudFormation::Stack
+      Properties:
+        TemplateURL: infrastructure.yaml
+        Parameters:
+          StackName: !Ref AWS::StackName
+          ECRRepositoryName: !Ref ECRRepositoryName
